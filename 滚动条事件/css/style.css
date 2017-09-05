@@ -1,0 +1,57 @@
+/*预处理*/
+*{
+	margin: 0;
+	padding: 0;
+}
+#box {
+	width: 100%;
+	height: 50px;
+	border: 1px solid red;
+	background: FFFFFF;
+	position: fixed;
+	top: -60px;
+}
+body {
+	height: 2000px;
+}
+#box>.box_center {
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+#box>.box_center>.box_left {
+	width: 125px;
+	height: 40px;
+	border: 1px solid FFFFFF;
+	float: left;
+	line-height: 40px;
+	margin-top: 4px;
+	background: url(../img/logo_s.v2.png) no-repeat;
+}
+#box>.box_center>.box_right {
+	width: 502px;
+	height: 35px;
+	float: left;
+	margin-left: 200px;
+	margin-top: 8px;
+background: #EFEFEF;
+}
+#box>.box_center>.box_right input {
+	width: 500px;
+	height: 33px;
+	text-indent: 10px;
+	outline: none;
+
+	background: url(../img/zxj.png) no-repeat 98% 50%;
+	
+}
+button {
+	float: left;
+	width: 50px;
+	height: 37px;
+	background: red;
+	margin-left: 504px;
+	margin-top: -37px;
+	outline: none;
+	border: 1px solid red;
+}

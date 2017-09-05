@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>滚动条</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="box">
+			<div class="box_center">
+				<div class="box_left"></div>
+				<div class="box_right">
+					<form action="" method="">
+						<input type="text" placeholder="签字笔">
+						<button><img src="img/ss.png"></button>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--js代码-->
+		<script>
+			window.onscroll = function () {
+				var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+				var oDiv = document.getElementById("box");
+			
+				if(scrollTop >= 300){
+					oDiv.style	.top = "0px";
+				}else{
+					oDiv.style.top = "-60px";
+				}
+				
+			}
+		</script>
+	</body>
+</html>

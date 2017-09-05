@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>滚动条事件</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				height: 2000px;
+				/*position: relative;*/
+			}
+			#head {
+				width: 100%;
+				height: 52px;
+				border: 1px solid #ccc;
+				background: #fff;
+				position: fixed;
+				top: -60px;
+			}
+			.head_left {
+				width: 1200px;
+				height: 52px;
+				margin: 0 auto;
+			}
+			.logo {
+				width: 125px;
+				height: 40px;
+				float: left;
+				background: url(img/logo_s.v2.png) no-repeat;
+			}
+			.fm {
+				width: 504px;
+				height: 37px;
+				float: left;
+				margin: 10px 0px 0px 250px;
+			}
+			.fm input {
+				width: 452px;
+				height: 37px;
+				border: 1px solid transparent;
+				float: left;
+				text-indent: 10px;
+				border: 1px solid #ccc;
+				background: url(img/zxj.png) no-repeat 98% 50%;
+			}
+			.fm button {
+				width: 50px;
+				height: 38px;
+				float: left;
+				background: red;
+				margin: 0px 0px 0px 0px;
+					outline: none;
+				border: 1px solid transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="head">
+			<div class="head_left">
+				<div class="logo"></div>
+				<div class="fm">
+					<input type="text" name="" placeholder="中秋">
+					<button><img src="img/ss.png"></button>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			window.onscroll = function () {
+				var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+				var oHead = document.getElementById("head");
+				
+				
+				if(scrollTop >= 300){
+					oHead.style.top = "0px";
+				}else{
+					oHead.style.top = "-60px";
+				}
+			}
+		</script>
+	</body>
+</html>
